@@ -216,7 +216,7 @@ as.Seurat.cell_data_set <- function(
   # Cheat and pull most information using as.SingleCellExperiment
   # cell_data_set objects inherit SingleCellExperiment
   object <- suppressWarnings(expr = as.Seurat(
-    x = as(object = x, Class = 'SingleCellExperiment'),
+    x = x,
     assay = assay,
     counts = counts,
     data = data,
